@@ -1,0 +1,81 @@
+
+body {
+    height: 100vh;
+    min-height: 100vh;
+}
+
+body {
+    border: 5px solid;
+    border-color: brown;
+    margin: 0%;
+    background-color: antiquewhite;
+}
+
+.center
+{
+    margin: auto;
+    width: 80%;
+}
+
+.main-title {
+    font-size: 2.0rem;
+    letter-spacing: 20px;
+    font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+    color: brown;
+}
+
+p.host {
+    font-size: 1.5rem;
+    letter-spacing: 10px;
+    font-family: 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+    color: brown;
+}
+
+p.time {
+    font-size: 1.0rem;
+    font-family: Arial, sans-serif;
+    color: brown;
+}
+
+p.location {
+    font-size: 1.0rem;
+    font-family: Arial, sans-serif;
+    color: brown;
+}
+
+img.circle {
+    border-radius: 50%;
+}
+
+/* customize animation */
+
+.colorChange {
+    animation: myfirst 5s;
+    -moz-animation: myfirst 5s; /* Firefox */
+    -webkit-animation: myfirst 5s; /* Safari and Chrome */
+    -o-animation: myfirst 5s; /* Opera */
+}
+
+@keyframes myfirst
+{
+from {background: red;}
+to {background: yellow;}
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+from {background: red;}
+to {background: yellow;}
+}
+
+@-webkit-keyframes myfirst /* Safari 和 Chrome */
+{
+from {background: red;}
+to {background: yellow;}
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+from {background: red;}
+to {background: yellow;}
+}
