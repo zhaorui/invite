@@ -1,84 +1,115 @@
-html,
-body {
+.debug {
+    /* border: darkorchid 3px solid; */
+}
+
+/* fullscreen solution */
+html, body {
     height: 100%;
+    margin: 0;
+    background-color: bisque;
 }
 
-body {
-    min-height: 100%;
+/* slide style */
+#slides {
+    position: relative;
+    height: 95%; /* 5% is for bottom button*/
+    padding: 0px;
+    margin: auto, 0px;
+    list-style-type: none;
 }
 
-body {
-    border: 20px solid;
-    border-color: brown;
-    margin: 0%;
-    background-color: antiquewhite;
-}
-
-.center
-{
+img#slide-btn {
+    display: block;
     margin: auto;
-    width: 80%;
+    width: 2em;
 }
 
+.slide {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    opacity: 0;
+    z-index: 1;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.vertical-center {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.showing {
+    opacity: 1;
+    z-index: 2;
+} 
+
+/* invitation style  */
+.invite-container {
+    background-color: bisque;
+}
 .main-title {
-    font-size: 4.0rem;
-    letter-spacing: 20px;
-    font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+    margin: 2em, auto;
+    font-family: Arial, Helvetica, sans-serif;
     color: brown;
 }
 
-p.host {
-    font-size: 3.0rem;
-    letter-spacing: 10px;
-    font-family: 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+.info {
+    margin: 2em, auto;
+    font-family: Arial, Helvetica, sans-serif;
     color: brown;
 }
 
-p.time {
-    font-size: 1.5rem;
-    font-family: Arial, sans-serif;
-    color: brown;
-}
-
-p.location {
-    font-size: 1.5rem;
-    font-family: Arial, sans-serif;
-    color: brown;
-}
-
-img.circle {
+img#avatar {
+    width: 50%;
     border-radius: 50%;
 }
 
-/* customize animation */
-
-.colorChange {
-    animation: myfirst 5s;
-    -moz-animation: myfirst 5s; /* Firefox */
-    -webkit-animation: myfirst 5s; /* Safari and Chrome */
-    -o-animation: myfirst 5s; /* Opera */
+/* puzzle style */
+.puzzle-container {
+    font-size: 0;
 }
 
-@keyframes myfirst
-{
-from {background: red;}
-to {background: yellow;}
+.puzzle {
+    display: inline-block;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 33.333%;
+    font-size: 1rem;
+    padding: 2%;
+    overflow: hidden;
 }
 
-@-moz-keyframes myfirst /* Firefox */
-{
-from {background: red;}
-to {background: yellow;}
+div.puzzle img {
+    width: 100%;
 }
 
-@-webkit-keyframes myfirst /* Safari 和 Chrome */
-{
-from {background: red;}
-to {background: yellow;}
+img.portrait {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
-@-o-keyframes myfirst /* Opera */
-{
-from {background: red;}
-to {background: yellow;}
+/* Good bye page style */
+.farewell {
+    margin: 2em auto;
+    padding: 2em;
+    text-align: center;
+    writing-mode: vertical-lr;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.5em;
+    font-size: 2.0em;
+    font-weight: bolder;
+    color: brown;
 }
