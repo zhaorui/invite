@@ -1,5 +1,5 @@
 .debug {
-    /* border: darkorchid 3px solid; */
+    border: darkorchid 3px solid;
 }
 
 /* fullscreen solution */
@@ -12,16 +12,19 @@ html, body {
 /* slide style */
 #slides {
     position: relative;
-    height: 95%; /* 5% is for bottom button*/
+    height: 100%; /* 5% is for bottom button*/
     padding: 0px;
     margin: auto, 0px;
     list-style-type: none;
 }
 
 img#slide-btn {
+    position: fixed;
+    bottom: 0.5em;
+    left: 50%;
     display: block;
-    margin: auto;
     width: 2em;
+    z-index: 100;
 }
 
 .slide {
